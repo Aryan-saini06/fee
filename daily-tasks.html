@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Tasks</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="list">
+        <p>Daily Tasks</p>
+        
+        <div class="todo-input-grid">
+            <input class="js-name-input name-input" type="text" placeholder="Daily task name">
+            <input type="date" class="js-due-date-input due-date-input">
+            <button class="add-todo-button" onclick="addToDo();">
+                Add
+            </button>
+        </div>
+        
+        <div class="navigateButton">
+            <button class="navigateButton">
+                <a href="list.html" id="navigateLink">Back to Main List</a>
+            </button>
+        </div>
+        
+        <div class="js-todo-list todo-grid">
+        </div>
+        
+        <button class="clear-all-btn" onclick="clearAllTodos()">Clear All Daily Tasks</button>
+        
+        <script src="todo-list.js"></script>
+    </div>
+</body>
+</html>
