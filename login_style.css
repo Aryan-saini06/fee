@@ -6,22 +6,26 @@
 
 body {
 	width: 100%;
-	background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(https://tse1.mm.bing.net/th?id=OIP.PAHCN0C-YN0LWNS0g_C48QHaE7&pid=Api&P=0&h=180);
-	background-position: center center;
-	background-size: cover;
-	height: 109vh;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	background-attachment: fixed;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	margin: -20px 0 50px;
+	margin: 0;
+	padding: 20px;
 }
 
 h1 {
 	font-weight: bold;
 	margin: 0;
+	font-size: 2.5rem;
+	background: linear-gradient(135deg, #667eea, #764ba2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
 
 h2 {
@@ -38,6 +42,7 @@ p {
 
 span {
 	font-size: 12px;
+	color: #666;
 }
 
 a {
@@ -48,25 +53,40 @@ a {
 }
 
 button {
-	border-radius: 20px;
+	border-radius: 25px;
 	border: 1px solid #B99470;
-	background-color: #B99470;
+	background: linear-gradient(135deg, #B99470, #A67C52);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 20px rgba(185, 148, 112, 0.3);
+	cursor: pointer;
+}
+
+button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 25px rgba(185, 148, 112, 0.4);
 }
 
 button.me {
-	background-color: transparent;
+	background: linear-gradient(135deg, transparent, transparent);
 	border-color: #FFFFFF;
+	color: #FFFFFF;
+	box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+button.me:hover {
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 12px 25px rgba(255, 255, 255, 0.3);
 }
 
 form {
-	background-color: #FFFFFF;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -74,26 +94,39 @@ form {
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 2px solid #e0e0e0;
+	padding: 15px 20px;
 	margin: 8px 0;
 	width: 100%;
+	border-radius: 12px;
+	font-size: 14px;
+	transition: all 0.3s ease;
+}
+
+input:focus {
+	outline: none;
+	border-color: #B99470;
+	box-shadow: 0 0 0 3px rgba(185, 148, 112, 0.1);
+	background-color: white;
 }
 
 .container {
-	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+  	box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 800px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height: 500px;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-container {
@@ -155,9 +188,7 @@ input {
 }
 
 .overlay {
-	background: #B99470;
-	background: -webkit-linear-gradient(to right, #B99470, #B99470);
-	background: linear-gradient(to right, #B99470, #B99470);
+	background: linear-gradient(135deg, #B99470, #A67C52);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -211,12 +242,37 @@ input {
 }
 
 .social-container a {
-	border: 1px solid #DDDDDD;
+	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0 5px;
-	height: 40px;
-	width: 40px;
+	height: 45px;
+	width: 45px;
+	transition: all 0.3s ease;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+.social-container a:hover {
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.container {
+		width: 95%;
+		min-height: 400px;
+	}
+	
+	form {
+		padding: 0 30px;
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
 }
