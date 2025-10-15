@@ -50,10 +50,11 @@ body {
 
 .navigateButton button {
     padding: 15px 25px;
+    width: 40%;
     background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: 600;
     font-size: 14px;
@@ -266,7 +267,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     margin-top: 30px;
-    width: 100%;
+    width: 50%;
     box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -300,5 +301,8 @@ body {
         bottom: auto;
         right: auto;
         margin: 20px 0;
+        width: 50px ;
+
     }
+   
 }
